@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.1 on win32)" generated="20210902 15:53:47.586" rpa="false" schemaversion="2">
+<suite id="s1" name="TesCase1-VeryfyLogInFunction" source="D:\Git\Selenium_POM_Robot__Python_Login\TestCase\Security\LogIn\TesCase1-VeryfyLogInFunction.Robot">
+<kw name="Open Web Browser" library="Commonfunctionalities" type="SETUP">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>60s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20210902 15:53:47.871" endtime="20210902 15:53:47.871"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210902 15:53:47.871" level="INFO">Opening browser 'chrome' to base url 'https://www.stealmylogin.com/demo.html'.</msg>
+<status status="PASS" starttime="20210902 15:53:47.871" endtime="20210902 15:53:50.148"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:47.871" endtime="20210902 15:53:50.148"/>
+</kw>
+<test id="s1-t1" name="TestCase1:Verify Login function">
+<kw name="Input Username" library="Login">
+<arg>${UserName}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Lp_txt_UserName}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210902 15:53:50.152" level="INFO">Typing text 'Helal' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20210902 15:53:50.151" endtime="20210902 15:53:50.258"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:50.151" endtime="20210902 15:53:50.258"/>
+</kw>
+<kw name="Input Password" library="Login">
+<arg>${Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Lp_txt_Password}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210902 15:53:50.259" level="INFO">Typing text '123456' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20210902 15:53:50.259" endtime="20210902 15:53:50.370"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:50.258" endtime="20210902 15:53:50.371"/>
+</kw>
+<kw name="Click Login Button" library="Login">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Lp_btn_Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210902 15:53:50.372" level="INFO">Clicking element 'xpath:/html/body/form/input[3]'.</msg>
+<status status="PASS" starttime="20210902 15:53:50.372" endtime="20210902 15:53:51.596"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:50.371" endtime="20210902 15:53:51.596"/>
+</kw>
+<kw name="Verify Login Page" library="Login">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Example Domain</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210902 15:53:51.607" level="INFO">Page title is 'Example Domain'.</msg>
+<status status="PASS" starttime="20210902 15:53:51.597" endtime="20210902 15:53:51.607"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Example Domain</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210902 15:53:51.625" level="INFO">Current page contains text 'Example Domain'.</msg>
+<status status="PASS" starttime="20210902 15:53:51.607" endtime="20210902 15:53:51.625"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:51.597" endtime="20210902 15:53:51.626"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:50.149" endtime="20210902 15:53:51.626"/>
+</test>
+<kw name="Close Web Browser" library="Commonfunctionalities" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210902 15:53:51.628" endtime="20210902 15:53:53.890"/>
+</kw>
+<status status="PASS" starttime="20210902 15:53:51.628" endtime="20210902 15:53:53.890"/>
+</kw>
+<doc>Verify Login function</doc>
+<status status="PASS" starttime="20210902 15:53:47.601" endtime="20210902 15:53:53.890"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesCase1-VeryfyLogInFunction">TesCase1-VeryfyLogInFunction</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
